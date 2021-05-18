@@ -164,6 +164,7 @@ export class Board extends React.Component {
         return (
             <div>
                 <div className="boardRow">
+                    <div class="square">8</div>
                     {this.renderSquare(8, 1)}
                     {this.renderSquare(8, 2)}
                     {this.renderSquare(8, 3)}
@@ -174,6 +175,7 @@ export class Board extends React.Component {
                     {this.renderSquare(8, 8)}
                 </div>
                 <div className="boardRow">
+                    <div class="square">7</div>
                     {this.renderSquare(7, 1)}
                     {this.renderSquare(7, 2)}
                     {this.renderSquare(7, 3)}
@@ -184,6 +186,7 @@ export class Board extends React.Component {
                     {this.renderSquare(7, 8)}
                 </div>
                 <div className="boardRow">
+                    <div className="square">6</div>
                     {this.renderSquare(6, 1)}
                     {this.renderSquare(6, 2)}
                     {this.renderSquare(6, 3)}
@@ -194,6 +197,7 @@ export class Board extends React.Component {
                     {this.renderSquare(6, 8)}
                 </div>
                 <div className="boardRow">
+                    <div className="square">5</div>
                     {this.renderSquare(5, 1)}
                     {this.renderSquare(5, 2)}
                     {this.renderSquare(5, 3)}
@@ -204,6 +208,7 @@ export class Board extends React.Component {
                     {this.renderSquare(5, 8)}
                 </div>
                 <div className="boardRow">
+                    <div className="square">4</div>
                     {this.renderSquare(4, 1)}
                     {this.renderSquare(4, 2)}
                     {this.renderSquare(4, 3)}
@@ -214,6 +219,7 @@ export class Board extends React.Component {
                     {this.renderSquare(4, 8)}
                 </div>
                 <div className="boardRow">
+                    <div className="square">3</div>
                     {this.renderSquare(3, 1)}
                     {this.renderSquare(3, 2)}
                     {this.renderSquare(3, 3)}
@@ -224,6 +230,7 @@ export class Board extends React.Component {
                     {this.renderSquare(3, 8)}
                 </div>
                 <div className="boardRow">
+                    <div className="square">2</div>
                     {this.renderSquare(2, 1)}
                     {this.renderSquare(2, 2)}
                     {this.renderSquare(2, 3)}
@@ -234,6 +241,7 @@ export class Board extends React.Component {
                     {this.renderSquare(2, 8)}
                 </div>
                 <div className="boardRow">
+                    <div className="square">1</div>
                     {this.renderSquare(1, 1)}
                     {this.renderSquare(1, 2)}
                     {this.renderSquare(1, 3)}
@@ -242,6 +250,17 @@ export class Board extends React.Component {
                     {this.renderSquare(1, 6)}
                     {this.renderSquare(1, 7)}
                     {this.renderSquare(1, 8)}
+                </div>
+                <div className="boardRow">
+                    <div className="square">&nbsp;</div>
+                    <div className="square">1</div>
+                    <div className="square">2</div>
+                    <div className="square">3</div>
+                    <div className="square">4</div>
+                    <div className="square">5</div>
+                    <div className="square">6</div>
+                    <div className="square">7</div>
+                    <div className="square">8</div>
                 </div>
             </div>
         )
@@ -253,7 +272,6 @@ export class Square extends React.Component {
         return (
             <button className="square"
                     onClick={() => this.props.onClick()}>
-                {this.props.row} : {this.props.col}<br/>
                 {this.props.value ?? '-'}
             </button>
         );
